@@ -41,13 +41,3 @@ header nav{
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-
-.Picapollo {
-    padding: 100px;
-    background-color: black;
-}
-
-.Picapollo2 {
-    padding: 1000px;
-    background-color: rgb(109, 241, 0);
-}
