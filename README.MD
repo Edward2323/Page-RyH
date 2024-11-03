@@ -5,6 +5,7 @@
 #### Tecnologias utilizadas
 
 - Pilares del desarrollo web (HTML, CSS, JavaScript)
+- Git and Github
 
 
-==PROYECTO EN DESARROLLO==
+**PROYECTO EN DESARROLLO**
