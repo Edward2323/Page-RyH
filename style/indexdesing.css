@@ -2,3 +2,52 @@ body {
     margin: 0;
     padding: 0;
 }
+
+header{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background: hsl(337, 92%, 70%, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+header nav{
+    display: flex;
+}
+
+.Logo {
+    margin: 0;
+    padding: 5px 0 5px 10px;
+    width: 50px;
+    height: 50px;
+}
+.BotonNav {
+    margin: 20px;
+    padding: 0;
+}
+
+.BotonNav a {
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff5f9;
+    font-size: 20px;
+}
+
+.BotonNav a:hover {
+    color: #F96CA2;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.Picapollo {
+    padding: 100px;
+    background-color: black;
+}
+
+.Picapollo2 {
+    padding: 1000px;
+    background-color: rgb(109, 241, 0);
+}
