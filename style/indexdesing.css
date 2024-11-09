@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 header{
@@ -10,10 +12,16 @@ header{
     background: hsl(337, 92%, 70%, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+main {
+    padding-top: 80px;
 }
 
 header nav{
     display: flex;
+    min-width: none;
 }
 
 .Logo {
@@ -42,33 +50,94 @@ header nav{
     transition: background-color 0.3s;
 }
 
+.dropdown-menu {
+    visibility: hidden; /* Cambia display: none por visibility */
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    background-color: hsl(337, 92%, 70%, 0.8);
+    padding: 10px;
+    border-radius: 0 0 0 25px;
+    width: 150px;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.dropdown-menu.show {
+    visibility: visible; 
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 0;
+    color: #fff5f9;
+    text-decoration: none;
+
+}
+
+.dropdown-menu a:hover {
+    color: #F96CA2;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .BotonNav {
+      display: none; /* Oculta los enlaces en pantallas pequeñas */
+    }
+    
+    .menu-toggle {
+      display: block; /* Muestra el botón de menú */
+    }
+  }
+
 /*----Footer*/
 Footer{
-    margin-left: 0;
+    background-color: rgb(255, 229, 238, 0.5);
+    margin: 0;
+    padding: 10px 0 0 0;
 }
 
 .footer-information-section{
     display: flex;
     justify-content: flex-start;
+    position: relative;
 }
 
 .logo-footer{
     width: 100x;
     height: 100px;
-    padding: 0%;    
-    margin: 0px 0 0 50px;
-    
+    padding: 0;
+    left: 0;   
 }
 
 .div-contact-us{
-    margin: 10px 0px 0 700px;
-    padding: 0;
+    position: absolute;
     list-style-type: none;
     font-size: 15px;
+    right:10px;
+
 }
 
 .div-designers{
-    margin: 10px 0 0 70px;
+    position: absolute;
+    right: 150px;
 }
 
 .list-title-contact-us, .list-title-designers{
@@ -108,11 +177,215 @@ Footer{
 
 .derechos{
     background-color: #f8b5d1;
-    padding: 0px 10px 5px 450px;
+    margin: 0;
+    padding: 0 0 5px 0;
+    text-align: center;
+    align-items: center;
 }
 
 .derechos p{
-    margin-top: 0px;
+    margin-top: 150px;
     padding-top: 10px;
+    left: 0;
 }
 /*----*/
+
+.nosotros {
+    margin: -20px 0 0 0;
+    padding: 100px;
+    background-color: rgb(255, 229, 238, 0.5) ;
+}
+
+/* Productos */
+#productos-container {
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    overflow: hidden;
+    width: 320px; 
+    position: relative;
+}
+
+.productos-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 270px;
+}
+
+.producto {
+    width: 300px;
+    height: 250px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 25px;
+    font-size: 1.2em;
+    flex-shrink: 0; 
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto h4 {
+    margin: 30px 0 0 0 !important;
+    font-size: 20px;
+}
+
+.producto h5 {
+    margin: 10px 0 0 0 !important;
+    visibility: hidden; 
+}
+
+.producto img{
+    transform: translateY(20px);
+    width: 200px !important;
+    height: 150px !important;
+    border-radius: 25px;
+}
+
+@media (min-width: 768px) {
+    #productos-container {
+        width: 880px;
+    }
+    .producto {
+        width: 200px;
+    }
+    .producto img{
+        width: 150px !important;
+        height: 100px !important;
+        border-radius: 25px;
+    }
+    .producto h5 {
+        margin: 80px 0 0 0;
+        visibility: visible; 
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #productos-container {
+        width: 665px;
+    }
+    .producto {
+        width: 200px;
+    }
+    .producto img{
+        width: 150px !important;
+        height: 100px !important;
+        border-radius: 25px;
+    }
+    .producto h5 {
+        margin: 80px 0 0 0;
+        visibility: visible; 
+        font-size: 15px;
+    }
+}
+
+.productos-seccion {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+}
+
+.productos-conteiner-button button {
+    margin: 5px 20px 20px 20px;
+    padding: 0 20px 0 20px;
+    border: none;
+    font-size: 20px;
+    background-color: white;
+}
+
+/* Articulos */
+#articulos-container {
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    overflow: hidden;
+    width: 320px; 
+    position: relative;
+}
+
+.articulos-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 270px;
+}
+
+.articulo {
+    width: 300px;
+    height: 250px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 25px;
+    font-size: 1.2em;
+    flex-shrink: 0; 
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.articulo h4 {
+    margin: 30px 0 0 0 !important;
+    font-size: 20px;
+}
+
+.articulo h5 {
+    margin: 10px 0 0 0 !important;
+    visibility: hidden; 
+}
+
+.articulo img{
+    transform: translateY(20px);
+    width: 200px !important;
+    height: 150px !important;
+    border-radius: 25px;
+}
+
+@media (min-width: 768px) {
+    #articulos-container {
+        width: 880px;
+    }
+    .articulo {
+        width: 200px;
+    }
+    .articulo img{
+        width: 150px !important;
+        height: 100px !important;
+        border-radius: 25px;
+    }
+    .articulo h5 {
+        margin: 80px 0 0 0;
+        visibility: visible; 
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #articulos-container {
+        width: 665px;
+    }
+    .articulo {
+        width: 200px;
+    }
+    .articulo img{
+        width: 150px !important;
+        height: 100px !important;
+        border-radius: 25px;
+    }
+    .articulo h5 {
+        margin: 80px 0 0 0;
+        visibility: visible; 
+        font-size: 15px;
+    }
+}
+
+.articulos-seccion {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+}
+
+.articulos-conteiner-button button {
+    margin: 5px 20px 20px 20px;
+    padding: 0 20px 0 20px;
+    border: none;
+    font-size: 20px;
+    background-color: white;
+}
