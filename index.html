@@ -18,29 +18,80 @@
                 <a href="#contactanos">Contactanos</a>
             </div>
         </nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="#nosotros">Nosotros</a>
+            <a href="#productos">Productos</a>
+            <a href="#contactanos">Contactanos</a>
+        </div>
     </header>
     <main>
         <section id="nosotros" class="nosotros">
-            
+            <h4>Picapollo</h4>
         </section>
-        <section id="productos" class="productos">
-
+        <section id="productos" class="productos-seccion">
+            <h2>Articulos</h2>
+            <div id="productos-container">
+                <div class="productos-inner" id="productos-inner">
+                    <div class="producto">
+                        <img src="./public/Picapollo.jpeg" alt="">
+                        <h4>Picapollo</h4>
+                        <h5>Crujiente, frito, jugoso, popular, dominicano, económico, sabroso.</h5>
+                    </div>
+                    <div class="producto">
+                        <img src="./public/Pechurina.jpeg" alt="">
+                        <h4>Pechurina</h4>
+                        <h5>Dorada, jugosa, frita, condimentada, suculenta, clásica, deliciosa.</h5>
+                    </div>
+                    <div class="producto">Producto 3</div>
+                    <div class="producto">Producto 4</div>
+                    <div class="producto">Producto 5</div>
+                    <div class="producto">Producto 6</div>
+                    <div class="producto">Producto 7</div>
+                    <div class="producto">Producto 8</div>
+                </div>
+            </div>
+            <div class="productos-conteiner-button">
+                <button onclick="moverCarrusel('productos-anterior')">&#10094;</button>
+                <button onclick="moverCarrusel('productos-siguiente')">&#10095;</button>
+            </div> 
+            <hr>
         </section>
-
-
-        <hr>
+        <section id="articulos" class="articulos-seccion">
+            <h2>Postres</h2>
+            <div id="articulos-container">
+                <div class="articulos-inner" id="articulos-inner">
+                    <div class="articulo">
+                        <img src="./public/Picapollo.jpeg" alt="">
+                        <h4>Picapollo</h4>
+                        <h5>Crujiente, frito, jugoso, popular, dominicano, económico, sabroso.</h5>
+                    </div>
+                    <div class="articulo">
+                        <img src="./public/Pechurina.jpeg" alt="">
+                        <h4>Pechurina</h4>
+                        <h5>Dorada, jugosa, frita, condimentada, suculenta, clásica, deliciosa.</h5>
+                    </div>
+                    <div class="articulo">Articulo 3</div>
+                    <div class="articulo">Articulo 4</div>
+                    <div class="articulo">Articulo 5</div>
+                    <div class="articulo">Articulo 6</div>
+                    <div class="articulo">Articulo 7</div>
+                    <div class="articulo">Articulo 8</div>
+                </div>
+            </div>
+            <div class="articulos-conteiner-button">
+                <button onclick="moverCarrusel('articulos-anterior')">&#10094;</button>
+                <button onclick="moverCarrusel('articulos-siguiente')">&#10095;</button>
+            </div>   
+        </section>
     </main>
-  
     <Footer>
-        <section class="footer-information-section">
+        <section id="contactanos" class="footer-information-section">
             <img src="./public/Logo.png" alt="Logo-RyH" class="logo-footer">
-
-            <div class="div-contact-us">
-    
+            <div class="div-contact-us">  
                 <p class= "list-title-contact-us">
                     Contactanos!
-                </p>
-                
+                </p>              
                 <ul class="list-networks">
                     <li>
                         <i class="fab fa-whatsapp fa-1x"></i>
@@ -50,94 +101,69 @@
                         <i class="fab fa-instagram fa-1x"></i>
                         <a href="https://www.instagram.com/supply_rh?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
                     </li>
-                </ul>
-                
-            </div>
-    
-    
-            <div class="div-designers">
-    
-                
+                </ul>             
+            </div>  
+            <div class="div-designers">           
                 <p class= "list-title-designers">
                     Diseñadores
-                </p>
-        
-                <ul class="list-designers">
-    
+                </p>  
+                <ul class="list-designers"> 
                     <li>
-    
                         <p class="programmer">
                             Edward Cabrera
-                        </p>
-                                            
+                        </p>                                          
                         <ul class="programmer-networks">
                             <li>
                                 <i class="fab fa-github fa-1x"></i>
                                 <a href="https://github.com/Edward2323">Github</a>
-                            </li>
-    
+                            </li>   
                             <li>
                                 <i class="fab fa-instagram fa-1x"></i>
                                 <a href="">Instagram</a>
                             </li>
-                        </ul>
-    
-                    </li>
-    
-                    <li>
-    
+                        </ul>    
+                    </li>    
+                    <li>   
                         <p class="programmer">
                             Eduardo Cabrera
-                        </p>
-    
+                        </p>  
                         <ul class="programmer-networks">
                             <li>
                                 <i class="fab fa-github fa-1x"></i>
                                 <a href="https://github.com/EduardoCabreraCarvajalWGEdd">Github</a>
-                            </li>
-    
+                            </li>   
                             <li>
                                 <i class="fab fa-instagram fa-1x"></i>
                                 <a href="https://www.instagram.com/cabreracarvajal?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
                             </li>
-                        </ul>
-    
-                    </li>
-    
-                    <li>
-    
+                        </ul>  
+                    </li>   
+                    <li>  
                         <p class="programmer">
                             Jorge Acosta
                         </p>
-    
                         <ul class="programmer-networks">
                             <li>
                                 <i class="fab fa-github fa-1x"></i>
                                 <a href="https://github.com/Raybelino">Github</a>
                             </li>
-    
                             <li>
                                 <i class="fab fa-instagram fa-1x"></i>
                                 <a href="https://www.instagram.com/jrayber/?utm_source=ig_web_button_share_sheet">Instagram</a>
                             </li>
                         </ul>
-    
                     </li>
-    
                 </ul>
-            <div>
-    
+            <div>   
         </section>
-
-        <div class="derechos">
-            <p>
-                &copy; 2024 RyH.com. Todos los derechos reservados.
-            </p>
-        </div>
-
-
-
+        <section> 
+            <div class="derechos">
+                <p>
+                    &copy; 2024 RyH.com. Todos los derechos reservados.
+                </p>
+            </div>  
+        </section>
     </Footer>
-    
+    <script src="./script/script.js"></script>
 </body>
 </html>
