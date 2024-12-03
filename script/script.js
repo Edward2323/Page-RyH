@@ -9,12 +9,22 @@ const articulosInner = document.getElementById('articulos-inner');
 let totalArticulos;
 
 function ajustarAnchoProducto() {
-    if (window.matchMedia("(max-width: 768px)").matches) {
+
+    if (window.matchMedia("(min-width: 768px)").matches && window.matchMedia("(max-width: 1024px)").matches) {
+        ancho_productos = 220;
+        ancho_articulos = 220;
+        totalProductos = productosInner.children.length -2
+        totalArticulos = articulosInner.children.length -2
+    }
+
+    else if (window.matchMedia("(max-width: 767px)").matches) {
         ancho_productos = 320;
         ancho_articulos = 320;
-        totalProductos = productosInner.children.length
+        totalProductos = productosInner.children.length 
         totalArticulos = articulosInner.children.length
-    } else {
+    }
+ 
+    else {
         ancho_productos = 220;
         ancho_articulos = 220;
         totalProductos = productosInner.children.length -3
